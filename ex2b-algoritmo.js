@@ -26,3 +26,14 @@ console.log(result2); // [1.1, 2.2, 3.3, 4.4, 5.5]
 const testCase3 = ["10", "20.5", "30", "40.75", "50"];
 const result3 = toNumberArray(testCase3);
 console.log(result3); // [10, 20.5, 30, 40.75, 50]
+
+
+function toNumberArray(stringArray) {
+    // Utilizamos el método map para transformar cada string en un número
+    const numbersArray = stringArray.map(function(stringNumber) {
+      // Convertimos el string a número utilizando parseFloat()
+      return parseFloat(stringNumber);
+    });
+    return numbersArray;
+  }
+  
